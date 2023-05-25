@@ -10,10 +10,10 @@
 
 ### Links and Resources
 
-- [GitHub Actions ci/cd](https://github.com/catdude2000/basic-express-server/actions)
+- [GitHub Actions ci/cd](https://github.com/catdude2000/auth-api/actions)
 // change--------------
-- [back-end dev server url](https://basic-express-server-dev-ha3v.onrender.com)
-- [back-end prod server url](https://basic-express-server-main-jktc.onrender.com)
+- [back-end dev server url](https://auth-api-dev-pw5m.onrender.com/)
+- [back-end prod server url](https://auth-api-main.onrender.com/)
 
 ### Collaborators
 
@@ -30,7 +30,6 @@ clone repo, `npm i`, then run `nodemon` in the terminal
 
 #### Routes
 
-
 // change--------------
 - GET : `/Mike` - specific route to hit
 
@@ -41,4 +40,4 @@ to run tests, after running `npm i`, run the command `npm test`
 #### UML
 
 // change----------------------
-![UML image](./assets/assets/Lab2UML.png)
+![UML image](./assets)
