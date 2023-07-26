@@ -7,13 +7,14 @@ const cors = require('cors');
 //check ALL file routes!!!!!!
 
 // Esoteric Resources
-const errorHandler = require('./error-handlers/500.js');
-const notFound = require('./error-handlers/404.js');
-const authRoutes = require('./auth/routes.js');
-const logger = require('./middleware/logger.js');
+const errorHandler = require('./error-handlers/500');
+const notFound = require('./error-handlers/404');
+const authRoutes = require('./auth/routes');
+const logger = require('./middleware/logger');
 
 
-const v1Routes = require('./routes/v1.js');
+const v1Routes = require('./routes/v1');
+//const v2Routes = require('./routes/v2.js');
 
 // Prepare the express app
 const app = express();
@@ -26,7 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(logger);
 
-app.use('/api/v1', v1Routes);
+app.use('/api/v1', v1Routes);  ///'/api/v1' correct??????
 
 // Routes
 app.use(authRoutes);
