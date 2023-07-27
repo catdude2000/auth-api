@@ -4,8 +4,6 @@
 const express = require('express');
 const cors = require('cors');
 
-//check ALL file routes!!!!!!
-
 // Esoteric Resources
 const errorHandler = require('./error-handlers/500');
 const notFound = require('./error-handlers/404');
@@ -34,7 +32,7 @@ app.use(authRoutes);
 
 // Catchalls
 app.use(errorHandler);
-app.use('*', notFound);
+app.use(notFound);
 
 
 module.exports = {
