@@ -7,7 +7,7 @@ const cors = require('cors');
 // Esoteric Resources
 const errorHandler = require('./error-handlers/500');
 const notFound = require('./error-handlers/404');
-const authRoutes = require('./auth/routes');
+const authRouter = require('./auth/routes');
 const logger = require('./middleware/logger');
 
 
@@ -28,7 +28,7 @@ app.use(logger);
 app.use('/api/v1', v1Routes);  ///'/api/v1' correct??????
 
 // Routes
-app.use(authRoutes);
+app.use(authRouter);
 
 // Catchalls
 app.use(errorHandler);
