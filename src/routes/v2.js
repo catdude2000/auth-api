@@ -2,7 +2,8 @@
 
 const express = require('express');
 const dataModules = require('../models');
-
+const bearer = require('../auth/middleware/bearer');
+const acl = require('../auth/middleware/acl');
 const router = express.Router();                            
 
 router.param('model', (req, res, next) => {
@@ -15,7 +16,7 @@ router.param('model', (req, res, next) => {
   }
 });
 
-router.get('/:model', handleGetAll);
+router.get('/:model', bearer, handleGetAll);
 router.get('/:model/:id', handleGetOne);
 router.post('/:model', handleCreate);
 router.put('/:model/:id', handleUpdate);
