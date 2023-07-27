@@ -16,11 +16,11 @@ router.param('model', (req, res, next) => {
   }
 });
 
-router.get('/:model', bearer, handleGetAll);
-router.get('/:model/:id', handleGetOne);
-router.post('/:model', handleCreate);
-router.put('/:model/:id', handleUpdate);
-router.delete('/:model/:id', handleDelete);
+router.get('/:model', acl, handleGetAll);
+router.get('/:model/:id', acl, handleGetOne);
+router.post('/:model', bearer, acl, handleCreate);
+router.put('/:model/:id', bearer, acl, handleUpdate);
+router.delete('/:model/:id', bearer, acl, handleDelete);
 
 async function handleGetAll(req, res) {
   let allRecords = await req.model.get();
