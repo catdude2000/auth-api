@@ -28,7 +28,7 @@ describe('test the server routes and db', () => {
   test('we can send a user via a basic auth to /signin', async () => {
     const res = await mockServer .post('/signin') .auth(user1.username, user1.password);
     expect(res.status).toBe(200);
-    expect(JSON.parse(res.text).username).toBe('sara');
+    expect(JSON.parse(res.text).username).toBe('mike');
     expect(JSON.parse(res.text).password).toBeTruthy();
   });
 });
