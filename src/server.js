@@ -12,7 +12,6 @@ const logger = require('./middleware/logger');
 
 
 const v1Routes = require('./routes/v1');
-//const v2Routes = require('./routes/v2.js');
 const v2Routes = require('./routes/v2');
 
 // Prepare the express app
@@ -26,8 +25,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(logger);
 
-app.use('/api/v1', v1Routes);  ///'/api/v1' correct??????
+app.use('/api/v1', v1Routes);
 app.use('/api/v2', v2Routes);
+
 // Routes
 app.use(authRouter);
 
