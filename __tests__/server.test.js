@@ -20,7 +20,7 @@ afterAll(async (done) => {
 
 describe('test the server routes and db', () => {
   test('we can post a new user to /signup', async () => {
-    const res = (await mockServer.post('/signup')).setEncoding(user1);
+    const res = await mockServer.post('/signup').send(user1);
     expect(res.status).toBe(200);
     expect(JSON.parse(res.text).username).toBe('mike');
     expect(JSON.parse(res.text).password).toBeTruthy();
