@@ -1,6 +1,6 @@
-# Lab(s) 3, 4 401
+# Lab 8 401
 
-## api-server
+## Auth API
 
 API Server with SQL and Postgres
 
